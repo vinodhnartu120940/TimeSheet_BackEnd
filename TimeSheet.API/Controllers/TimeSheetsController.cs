@@ -37,7 +37,8 @@ namespace TimeSheets.API.Controllers
         [Route("{EmployeeID}")]
         public async Task<IActionResult> GetTimeSheet([FromRoute] int EmployeeID)
         {
-            var timeSheet = await timeSheetsDbContext.TimeSheets.FirstOrDefaultAsync(x => x.EmployeeID == EmployeeID);
+            //var timeSheet = await timeSheetsDbContext.TimeSheets.FirstOrDefaultAsync(x => x.EmployeeID == EmployeeID);
+            var timeSheet = await timeSheetsDbContext.TimeSheets.Where(x => x.EmployeeID == EmployeeID).ToListAsync();
             if (timeSheet != null)
             {
                 return Ok(timeSheet);

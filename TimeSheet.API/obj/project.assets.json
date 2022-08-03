@@ -2061,19 +2061,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\VINODH\\.nuget\\packages\\": {}
+    "C:\\Users\\MAHESH\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VINODH\\Downloads\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\TimeSheets.API.csproj",
+      "projectUniqueName": "D:\\TimeSheet_Updated\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\TimeSheets.API.csproj",
       "projectName": "TimeSheets.API",
-      "projectPath": "C:\\Users\\VINODH\\Downloads\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\TimeSheets.API.csproj",
-      "packagesPath": "C:\\Users\\VINODH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VINODH\\Downloads\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\obj\\",
+      "projectPath": "D:\\TimeSheet_Updated\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\TimeSheets.API.csproj",
+      "packagesPath": "C:\\Users\\MAHESH\\.nuget\\packages\\",
+      "outputPath": "D:\\TimeSheet_Updated\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\VINODH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MAHESH\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2136,7 +2136,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
