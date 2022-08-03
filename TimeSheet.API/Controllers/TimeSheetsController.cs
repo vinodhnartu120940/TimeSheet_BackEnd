@@ -39,10 +39,24 @@ namespace TimeSheets.API.Controllers
         {
             //var timeSheet = await timeSheetsDbContext.TimeSheets.FirstOrDefaultAsync(x => x.EmployeeID == EmployeeID);
             var timeSheet = await timeSheetsDbContext.TimeSheets.Where(x => x.EmployeeID == EmployeeID).ToListAsync();
+            if (timeSheet != null) 
+            {
+                return Ok(timeSheet);
+            }
+
+            return NotFound("Card not found");
+        }
+
+        [HttpGet]
+        [Route("{EmployeeID}/{Date}")]
+        public async Task<IActionResult> GetTimeSheet1([FromRoute] int EmployeeID, string Date)
+        {
+            var timeSheet = await timeSheetsDbContext.TimeSheets.Where(x => x.EmployeeID == EmployeeID && x.Date == Date).ToListAsync();
             if (timeSheet != null)
             {
                 return Ok(timeSheet);
             }
+
             return NotFound("Card not found");
         }
     }
