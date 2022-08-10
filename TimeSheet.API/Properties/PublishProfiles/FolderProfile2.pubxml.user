@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\mywebsite</_PublishTargetUrl>
+    <History>True|2022-08-08T05:12:53.3878162Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="CardsDbConnctionString">
+      <Value>Data Source=DESKTOP-HME0A24%3bInitial Catalog=MaheshS%3b User ID=MaheshS%3b Password=MaheshS</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="TimeSheets.API.Data.TimeSheetsDbContext">
+      <Value>Data Source=DESKTOP-HME0A24%3bInitial Catalog=MaheshS%3b User ID=MaheshS%3b Password=MaheshS</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

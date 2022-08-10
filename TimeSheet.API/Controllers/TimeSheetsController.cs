@@ -7,7 +7,7 @@ namespace TimeSheets.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class TimeSheetsController:Controller
+    public class TimeSheetsController : Controller
     {
         private readonly TimeSheetsDbContext timeSheetsDbContext;
         public TimeSheetsController(TimeSheetsDbContext TimeSheetsDbContext)
@@ -22,8 +22,55 @@ namespace TimeSheets.API.Controllers
             //timeSheet.EmployeeID = timeSheet.EmployeeID;
             await timeSheetsDbContext.TimeSheets.AddAsync(timeSheet);
             await timeSheetsDbContext.SaveChangesAsync();
-            return Ok(timeSheet);
+            return Ok();
         }
+
+        //[HttpPost]
+        //public async Task<IActionResult> PostTimeSheet(List<TimeSheet> timeSheets)
+        //{
+        //    foreach (var item in timeSheets)
+        //    {
+        //        var timeSheet = new TimeSheet();
+        //        timeSheet.EmployeeID = item.EmployeeID;
+        //        timeSheet.EmployeeName = item.EmployeeName;
+        //        timeSheet.ProjectName = item.ProjectName;
+        //        timeSheet.Activity = item.Activity;
+        //        timeSheet.Task = item.Task;
+        //        timeSheet.Date = item.Date;
+        //        timeSheet.WorkHours = item.WorkHours;
+        //        await timeSheetsDbContext.TimeSheets.AddAsync(timeSheet);
+        //        //timeSheetsDbContext.SaveChanges();
+        //    }
+        //    timeSheetsDbContext.SaveChanges();
+        //    //await timeSheetsDbContext.TimeSheets.AddAsync(timeSheet);
+        //    //await timeSheetsDbContext.SaveChangesAsync();  
+        //    return Ok();
+
+        //}
+
+        //[HttpPost]
+        //public async Task<IActionResult> PostTimeSheetOne(List<TimeSheet> timeSheets)
+        //{
+        //    //foreach (var item in timeSheets)
+        //    //{
+        //    //    var timeSheet = new TimeSheet();
+        //    //    timeSheet.EmployeeID = item.EmployeeID;
+        //    //    timeSheet.EmployeeName = item.EmployeeName;
+        //    //    timeSheet.ProjectName = item.ProjectName;
+        //    //    timeSheet.Activity = item.Activity;
+        //    //    timeSheet.Task = item.Task;
+        //    //    timeSheet.Date = item.Date;
+        //    //    timeSheet.WorkHours = item.WorkHours;
+        //    //    await timeSheetsDbContext.TimeSheets.AddAsync(timeSheet);
+        //    //    //timeSheetsDbContext.SaveChanges();
+        //    //}
+        //    //timeSheetsDbContext.SaveChanges();
+        //    //await timeSheetsDbContext.TimeSheets.AddAsync(timeSheet);
+        //    //await timeSheetsDbContext.SaveChangesAsync();  
+        //    return Ok();
+
+        //}
+
         //Get TimeSheets
         [HttpGet]
         public async Task<IActionResult> GetTimeSheets()
@@ -39,7 +86,7 @@ namespace TimeSheets.API.Controllers
         {
             //var timeSheet = await timeSheetsDbContext.TimeSheets.FirstOrDefaultAsync(x => x.EmployeeID == EmployeeID);
             var timeSheet = await timeSheetsDbContext.TimeSheets.Where(x => x.EmployeeID == EmployeeID).ToListAsync();
-            if (timeSheet != null) 
+            if (timeSheet != null)
             {
                 return Ok(timeSheet);
             }
