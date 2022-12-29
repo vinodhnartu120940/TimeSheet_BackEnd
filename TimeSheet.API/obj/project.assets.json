@@ -2066,11 +2066,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TimeSheet_Updated\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\TimeSheets.API.csproj",
+      "projectUniqueName": "C:\\Users\\MAHESH\\Desktop\\Updated_TimeSheet\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\TimeSheets.API.csproj",
       "projectName": "TimeSheets.API",
-      "projectPath": "D:\\TimeSheet_Updated\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\TimeSheets.API.csproj",
+      "projectPath": "C:\\Users\\MAHESH\\Desktop\\Updated_TimeSheet\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\TimeSheets.API.csproj",
       "packagesPath": "C:\\Users\\MAHESH\\.nuget\\packages\\",
-      "outputPath": "D:\\TimeSheet_Updated\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\obj\\",
+      "outputPath": "C:\\Users\\MAHESH\\Desktop\\Updated_TimeSheet\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MAHESH\\AppData\\Roaming\\NuGet\\NuGet.Config",

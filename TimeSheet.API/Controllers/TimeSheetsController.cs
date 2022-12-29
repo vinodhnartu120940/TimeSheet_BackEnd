@@ -57,31 +57,63 @@ namespace TimeSheets.API.Controllers
         }
 
         //Get TimeSheet
-        [HttpGet]
-        [Route("{EmployeeID}")]
-        public async Task<IActionResult> GetTimeSheet([FromRoute] int EmployeeID)
-        {
-            //var timeSheet = await timeSheetsDbContext.TimeSheets.FirstOrDefaultAsync(x => x.EmployeeID == EmployeeID);
-            var timeSheet = await timeSheetsDbContext.TimeSheets.Where(x => x.EmployeeID == EmployeeID).ToListAsync();
-            if (timeSheet != null)
-            {
-                return Ok(timeSheet);
-            }
+        //[HttpGet]
+        //[Route("{EmployeeID}")]
+        //public async Task<IActionResult> GetTimeSheet([FromRoute] int EmployeeID)
+        //{
+        //    //var timeSheet = await timeSheetsDbContext.TimeSheets.FirstOrDefaultAsync(x => x.EmployeeID == EmployeeID);
+        //    var timeSheet = await timeSheetsDbContext.TimeSheets.Where(x => x.EmployeeID == EmployeeID).ToListAsync();
+        //    if (timeSheet != null)
+        //    {
+        //        return Ok(timeSheet);
+        //    }
 
-            return NotFound("Card not found");
-        }
+        //    return NotFound("Data not found");
+        //}
 
         [HttpGet]
         [Route("{EmployeeID}/{Date}")]
-        public async Task<IActionResult> GetTimeSheet1([FromRoute] int EmployeeID, string Date)
+        public async Task<IActionResult> GetTimeSheet1([FromRoute] int EmployeeID, DateTime Date)
         {
             var timeSheet = await timeSheetsDbContext.TimeSheets.Where(x => x.EmployeeID == EmployeeID && x.Date == Date).ToListAsync();
             if (timeSheet != null)
             {
                 return Ok(timeSheet);
             }
+            else
+            {
+                return NotFound("Data not found");
+            }
+        }
 
-            return NotFound("Card not found");
+        [HttpGet]
+        [Route("{EmployeeID}")]
+        public async Task<IActionResult> GetTimeSheetMonthWise([FromRoute] int EmployeeID)
+        {
+            //var timeSheet = await timeSheetsDbContext.TimeSheets.Where(x => x.EmployeeID == EmployeeID && x.Date.Month == DateTime.Today.Month).ToListAsync();
+            var Date = await timeSheetsDbContext.TimeSheets.Where(x => x.EmployeeID == EmployeeID && x.Date.Month == DateTime.Now.Month).Select(x => x.Date).Distinct().ToListAsync();
+            if (Date != null)
+            {
+                return Ok(Date);
+            }
+
+            return NotFound("Data not found");
+        }
+
+        [HttpGet]
+        [Route("ProjectName")]
+        public async Task<IActionResult> GetProjectName()
+        {
+            var ProjectName = await timeSheetsDbContext.ProjectName.ToListAsync();
+            return Ok(ProjectName);
+        }
+
+        [HttpGet]
+        [Route("Activity/{ProjectID}")]
+        public async Task<IActionResult> GetActivities([FromRoute] int ProjectID)
+        {
+            var Activities = await timeSheetsDbContext.Activities.Where(x => x.ProjectID == ProjectID).ToListAsync();
+            return Ok(Activities);
         }
     }
 }

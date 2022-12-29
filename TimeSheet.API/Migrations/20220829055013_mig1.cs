@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace TimeSheets.API.Migrations
 {
-    public partial class sanju : Migration
+    public partial class mig1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -19,7 +20,7 @@ namespace TimeSheets.API.Migrations
                     ProjectName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Activity = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Task = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Date = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     WorkHours = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

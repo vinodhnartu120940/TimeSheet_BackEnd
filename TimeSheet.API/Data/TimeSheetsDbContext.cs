@@ -10,6 +10,8 @@ namespace TimeSheets.API.Data
         }
         //Dbset
         public DbSet<TimeSheet> TimeSheets { get; set; }
-        
+        public DbSet<ProjectName> ProjectName { get; set; }
+        public DbSet<Activities> Activities { get; set; } 
+
     }
 }

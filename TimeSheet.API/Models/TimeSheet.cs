@@ -13,7 +13,7 @@ namespace TimeSheets.API.Models
         public string ProjectName { get; set; }
         public string Activity { get; set; }
         public string Task { get; set; }
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
         public int WorkHours { get; set; }
     }
 }

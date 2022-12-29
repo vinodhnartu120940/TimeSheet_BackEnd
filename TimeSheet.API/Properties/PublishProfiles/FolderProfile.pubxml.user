@@ -4,7 +4,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\inetpub\wwwroot\mywebsite</_PublishTargetUrl>
-    <History>False|2022-08-05T12:35:45.7471530Z;</History>
+    <_PublishTargetUrl>C:\inetpub\wwwroot\smbxltspublish</_PublishTargetUrl>
+    <History>False|2022-12-21T05:20:57.2637205Z;False|2022-12-21T10:49:09.2032133+05:30;</History>
   </PropertyGroup>
 </Project>
