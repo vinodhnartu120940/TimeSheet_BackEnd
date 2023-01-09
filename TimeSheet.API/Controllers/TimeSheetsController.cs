@@ -73,7 +73,7 @@ namespace TimeSheets.API.Controllers
 
         [HttpGet]
         [Route("{EmployeeID}/{Date}")]
-        public async Task<IActionResult> GetTimeSheet1([FromRoute] int EmployeeID, DateTime Date)
+        public async Task<IActionResult> GetTimeSheet1([FromRoute] string EmployeeID, DateTime Date)
         {
             var timeSheet = await timeSheetsDbContext.TimeSheets.Where(x => x.EmployeeID == EmployeeID && x.Date == Date).ToListAsync();
             if (timeSheet != null)
@@ -88,7 +88,7 @@ namespace TimeSheets.API.Controllers
 
         [HttpGet]
         [Route("{EmployeeID}")]
-        public async Task<IActionResult> GetTimeSheetMonthWise([FromRoute] int EmployeeID)
+        public async Task<IActionResult> GetTimeSheetMonthWise([FromRoute] string EmployeeID)
         {
             //var timeSheet = await timeSheetsDbContext.TimeSheets.Where(x => x.EmployeeID == EmployeeID && x.Date.Month == DateTime.Today.Month).ToListAsync();
             var Date = await timeSheetsDbContext.TimeSheets.Where(x => x.EmployeeID == EmployeeID && x.Date.Month == DateTime.Now.Month).Select(x => x.Date).Distinct().ToListAsync();

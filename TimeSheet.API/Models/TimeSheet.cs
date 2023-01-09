@@ -8,7 +8,7 @@ namespace TimeSheets.API.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-        public int EmployeeID { get; set; } 
+        public string EmployeeID { get; set; } 
         public string EmployeeName { get; set; }
         public string ProjectName { get; set; }
         public string Activity { get; set; }

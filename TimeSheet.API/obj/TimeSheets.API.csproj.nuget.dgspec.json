@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MAHESH\\Desktop\\Updated_TimeSheet\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\TimeSheets.API.csproj": {}
+    "C:\\Users\\VINODH\\Desktop\\TimeSheet\\TimeSheet\\TimeSheet-API\\TimeSheet.API\\TimeSheets.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MAHESH\\Desktop\\Updated_TimeSheet\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\TimeSheets.API.csproj": {
+    "C:\\Users\\VINODH\\Desktop\\TimeSheet\\TimeSheet\\TimeSheet-API\\TimeSheet.API\\TimeSheets.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MAHESH\\Desktop\\Updated_TimeSheet\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\TimeSheets.API.csproj",
+        "projectUniqueName": "C:\\Users\\VINODH\\Desktop\\TimeSheet\\TimeSheet\\TimeSheet-API\\TimeSheet.API\\TimeSheets.API.csproj",
         "projectName": "TimeSheets.API",
-        "projectPath": "C:\\Users\\MAHESH\\Desktop\\Updated_TimeSheet\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\TimeSheets.API.csproj",
-        "packagesPath": "C:\\Users\\MAHESH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MAHESH\\Desktop\\Updated_TimeSheet\\TimeSheet-API\\TimeSheet-API\\TimeSheet.API\\obj\\",
+        "projectPath": "C:\\Users\\VINODH\\Desktop\\TimeSheet\\TimeSheet\\TimeSheet-API\\TimeSheet.API\\TimeSheets.API.csproj",
+        "packagesPath": "C:\\Users\\VINODH\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\VINODH\\Desktop\\TimeSheet\\TimeSheet\\TimeSheet-API\\TimeSheet.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MAHESH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\VINODH\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +65,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -77,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

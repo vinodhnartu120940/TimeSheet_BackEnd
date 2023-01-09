@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TimeSheets.API.Data;
 
@@ -11,9 +12,10 @@ using TimeSheets.API.Data;
 namespace TimeSheets.API.Migrations
 {
     [DbContext(typeof(TimeSheetsDbContext))]
-    partial class TimeSheetsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230109070210_EmployeeAdded")]
+    partial class EmployeeAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
